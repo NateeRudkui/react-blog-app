@@ -1,0 +1,14 @@
+nav{
+    background-color: antiquewhite;
+    height: 30px;
+    padding:20px;
+}
+
+a{
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+a:hover{
+    color: aquamarine;
+}
