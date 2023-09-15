@@ -5,6 +5,7 @@ import { Home } from "./components/home";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Notfound } from "./components/Notfound";
+import Detail from "./components/Detail";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Notfound />} />
           <Route path="/home" element={<Navigate to={"/"} />} />
+          <Route path="/blog/:id" element={<Detail />} />
         </Routes>
       </BrowserRouter>
     </div>
