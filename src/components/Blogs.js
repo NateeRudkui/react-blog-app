@@ -1,3 +1,18 @@
+import blogs from "../data/blogs";
+import "./Blogs.css";
+
 export function Blogs() {
-  return <h1>my blog</h1>;
+  return (
+    <div className="blogs-container">
+      <article>
+        {blogs.map((item) => (
+          <div className="card" key={item.id}>
+            <h2>{item.title}</h2>
+            <p>{item.content.substring(0, 300)}</p>
+            <hr />
+          </div>
+        ))}
+      </article>
+    </div>
+  );
 }
