@@ -17,5 +17,14 @@ export default function Detail() {
     setAuthor(result.author);
   }, []);
 
-  return <h1>รายละเอียก : {id}</h1>;
+  return (
+    <div className="container">
+      <h2 className="title">บทความ : {title}</h2>
+      <img src={image_url} alt="title" />
+      <div className="blog-detail">
+        <strong>{author}</strong>
+        <p>{content}</p>
+      </div>
+    </div>
+  );
 }
