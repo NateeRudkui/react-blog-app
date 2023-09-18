@@ -16,6 +16,7 @@ export default function Detail() {
     setImage_url(result.image_url);
     setContent(result.content);
     setAuthor(result.author);
+    // eslint-disable-next-line
   }, []);
 
   return (

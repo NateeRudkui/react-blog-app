@@ -1,10 +1,24 @@
+import { useEffect, useState } from "react";
 import blogs from "../data/blogs";
 import "./Blogs.css";
 import { Link } from "react-router-dom";
 
 export function Blogs() {
+  const [search, setSearch] = useState(" ");
+  useEffect(() => {
+    const result = blogs.filter((item) => item.title.includes(search));
+    console.log(result);
+  });
   return (
     <div className="blogs-container">
+      <input
+        type="text"
+        className="search-input"
+        placeholder="ค้นหาบทความ"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <div className="search-container"></div>
       <article>
         {blogs.map((item) => (
           <Link to={`/blog/${item.id}`} key={item.id}>
